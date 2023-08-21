@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>angelica de jesus</title>
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"> 
+  </script>
+  <link rel="icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <ul class="main-nav">
+      <a href="index.html"><li class="center">angelica de jesus</li></a>
+      <a class="right" href="contact.html"><i class="fa-regular fa-lg fa-envelope"></i></a>
+    </ul>
+  </nav>
+
+  <div class="front">
+    <img class="cover" src="./img/angelica.JPG">
+      <div class="image-text-cover">
+        <div class="image-title-cover">❦</div>
+          <p>Model and Web Developer currently based in between London and NYC. Passionate about art, design, video editing, and coding.</p>
+      </div>
+      <div class="collage">
+        <img class="img" src="./img/1.JPG">
+        <img class="img" src="./img/2.jpg">
+        <img class="img" src="./img/3.JPG">
+        <img class="img" src="./img/4.jpg">
+        <img class="img" src="./img/5.jpg">
+      </div>
+  </div>
+
+  <script>
+    function setImgPosition() {
+      $('.img').each(function() {
+        var contW = $('.front').width(),
+            contH = $('.front').height(),
+            maxPosX = (contW - $(this).outerWidth() - 10),
+            maxPosY = (contH - $(this).outerHeight() - 10),
+            randPosX = Math.floor((Math.random() * maxPosX)),
+            randPosY = Math.floor((Math.random() * maxPosY)),
+            randZind = Math.floor((Math.random() * 3));
+            rand = Math.floor(Math.random()*18)+15;
+            width = Math.round(($('.front').width()/100)*rand);
+            rotate = (Math.random()*10)-5; 
+              $(this).css({
+                'left': randPosX + 'px',
+                'top': randPosY + 'px',
+                'width': width,
+                'transform': 'rotate(' + rotate + 'deg)'
+              });
+        });
+    }
+
+    window.onload = setImgPosition;
+
+    var resizeend;
+    window.onresize = function(){
+      clearTimeout(resizeend);
+      resizeend = setTimeout(setImgPosition, 100);
+    };
+  </script>
+    
+  <div class="title">
+    <h1>My Projects</h1>
+    <p>HTML | CSS | JavaScript | React</p>
+  </div>
+
+   <div class="grid-wrapper">
+    <div class="box"><img src="./img/project1.jpg">
+      <a href="#one">
+        <div class="image-text one">
+          <div class="image-title">Instant Search Filter using JS React</div>
+          <p>Learn More</p>
+        </div>
+      </a>
+    </div>
+    <div class="box"><img src="./img/project3.jpg">
+      <a href="#two">
+        <div class="image-text two">
+          <div class="image-title">Online Blog using Fetch API</div>
+          <p>Learn More</p>
+        </div>
+      </a>
+    </div>
+    <div class="box"><img src="./img/project2.jpg">
+      <a href="#three">
+        <div class="image-text three">
+          <div class="image-title">Drag & Drop Planner using Vanilla JS</div>
+          <p>Coming Soon</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <section class="preview" id="one">
+    <h1>Project One: Closet Search Filter</h1>
+      <div class="video">
+        <div class="vid"><video playsinline autoplay muted loop src="./img/project1.mp4" width="60%"></video></div>
+          <div class="buttons-section">
+            <button class="button-30" role="button"><a href="https://amldej.github.io/angelicas-closet/" target=”_blank”>Launch Site</a></button>
+            <button class="button-30" role="button"><a href="https://github.com/amldej/angelicas-closet" target=”_blank”>See Github</a></button>
+          </div>
+        <ul> 
+          <li><b>Client Request:</b> As I was choosing what sorts of projects I wanted to include in my portfolio, I decided to look within my own personal dilemmas. For the past couple months I have been living as a bit of a nomad which meant I was essentially living out of my suitcase. I found myself rummaging through my clothes to decide on an outfit, to then reorganize, to then rummage again the next day. To avoid a mess I would sometimes rewear a lot of the items that were sitting on top, forgetting all about the rest of my precious wardrobe.</li> 
+          <li><b>Solution:</b> I decided to use JavaScript React to create a closet search filter. This allowed me to be able to scroll through my items as well as filter the results depending on type or color. I included functions such as "pin" (which requires simply clicking the item) and "unpin" in order to see different clothing items next to each other. There is also a hide button to prevent the item from appearing wheather it's because it's a no or because it's in the dirty bin.</li>
+          <li><b>Skills Performed:</b> HTML/CSS, JavaScript React, filtering arrays, Class Based Components, use of constructor/super functions to set state</li>
+        </ul>
+      </div>
+  </section>
+  <section class="preview" id="two">
+    <h1>Project Two: Personal Online Blog</h1>
+      <div class="video">
+        <div class="vid"><video playsinline autoplay muted loop src="./img/project2.mp4" width="60%"></video>
+         <div class="buttons-section">
+            <button class="button-30" role="button"><a href="https://amldej.github.io/online-blog/" target=”_blank”>Launch Site</a></button>
+            <button class="button-30" role="button"><a href="https://github.com/amldej/online-blog" target=”_blank”>See Github</a></button>
+          </div>
+        <ul>
+          <li><b>Client Request:</b> For my next project, I wanted to create another website that I could use everyday. Something I make sure to do often is journal - whether it's recalling a happy event or reflecting on current emotions, I have found it to be very beneficial for my own being. I do like to journal by hand, but sometimes if I'm in a time crunch or have lots to say I turn to typing. I will usually just use my notes App however wanted to create something that had more of a journal feel, something seperate from where I keep my daily to do lists.</li> 
+          <li><b>Solution:</b> I decided to create a simple online blog platform using JavaScript React as well as Google Firebase. For the homepage I decided on a photo of a journal along with some writing I did on SketchPad to create that handwritten journal feel. Under "thoughts" I have the entries being transferred from Firebase appearing in order from newest to oldest. Lastly, you can create a new entry under the "new" tab that will add onto the Firebase data collection at publish. I kept the design clean and simple embodying that of an empty notebook.</li>
+          <li><b>Skills Performed:</b> HTML/CSS, JavaScript React, React Hooks: useState and useEffect, Google FireBase </li>
+       </ul>
+     </div>
+  </section>
+<!--     <section class="preview" id="three">
+      <h1>Project Three</h1>
+    </section> -->
+  <footer>© 2023 Coded by Angelica de Jesus.</footer>
+</body>
+</html>

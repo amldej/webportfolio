@@ -1,0 +1,336 @@
+@font-face {
+font-family: 'Marny';
+src:  url('fonts/marnyregular-lg3gx.woff2') format('woff2');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: georgia;
+    background: #fcf9f1;
+    -webkit-animation: fadein 2s;
+}
+
+.nav-bar {
+    position: sticky;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    background-color: #fcf9f1;
+}
+
+.main-nav {
+    margin-left: -10px;
+    display: flex;
+    list-style: none;
+}
+
+.center {
+    font-size: 50px;
+    font-family: "Marny";
+}
+
+.right {
+    margin-left: auto;
+    padding: 25px;
+    padding-top: 40px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.cover {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.front {
+    overflow: hidden;
+    position: relative;
+}
+
+.img {
+  position: absolute;
+  width: 20%;
+  opacity: .5;
+}
+
+.image-text-cover {
+    position: absolute;
+    top: 4%;
+    left: 56%;
+    width: 43%;
+    height: 30%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    transition: all .25s ease;
+    animation: slideLeft 1s ease forwards;
+    z-index: 1000;
+    opacity: .8;
+}
+
+.image-title-cover {
+    font-size: 2em;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fcf9f1;
+}
+
+.image-text-cover p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: top;
+    transition: all .25s ease;
+    animation: slideLeft 1s ease forwards;
+    color: #fcf9f1;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+    .image-text-cover {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (min-width:1250px) {
+    .image-text-cover {
+        font-size: 1.3em;
+    }
+    .title {
+        font-size: 1.4em;
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+}
+
+.title h1 {
+    margin-bottom: 8px;
+    font-size: 2.5em;
+}
+
+.title p {
+    margin-top: 8px;
+}
+
+.grid-wrapper {
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 30%);
+    background-color: #fcf9f1;
+    padding: 30px 10px 0px 10px;
+}
+
+.box {
+    position: relative;
+}
+
+.box > img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .25s ease;
+}
+
+.image-text p {
+    font-size: .8em;
+    font-style: italic;
+}
+
+.image-text:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.three {
+    opacity: 1;
+}
+
+.three:hover{
+    cursor: default;
+    opacity: 1;
+}
+
+.preview {
+    margin: 0px 100px 0px 100px;
+
+}
+
+.preview h1{
+    margin: 0;
+    padding: 80px 0px 30px 0px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+@media only screen and (max-width: 700px) {
+    .preview {
+    margin: 0px 20px 0px 20px;
+}
+}
+
+.video ul {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.video li {
+    padding-top: 20px;
+    list-style: none;
+}
+
+video {
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+.vid {
+    display: block;
+    margin: auto;
+}
+
+.buttons-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10px;
+}
+
+button {
+    font-family: "JetBrains Mono",monospace;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  padding: 3px 5px 3px 5px;
+}
+
+button:hover {
+  border-color: #b5b5b5;
+}
+
+@media only screen and (max-width: 900px) {
+    .video {
+        display: block;
+    }
+
+    video {
+    display: block;
+    margin: auto;
+    }
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    font-family: 'Cormorant Garamond', serif;
+    padding-right: 15%;
+    padding-top: 8%;
+}
+
+.contact-section h1{
+    padding: 10px;
+    margin: 0;
+}
+
+.contact-page ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-page li {
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.contact-page > img {
+    width: 400px;
+    opacity: .8;
+    padding: 10px;
+    padding-top: 15px;
+    border-radius: 45px;
+}
+
+.contact-page h5 {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+    text-align: right;
+}
+
+@media only screen and (max-width: 500px) {
+    .contact-page > img {
+    width: 250px;
+}
+}
+
+footer {
+    display: flex;
+    height: 40px;
+    align-items: top;
+    justify-content: center;
+    font-size: 1em;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: .8;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
